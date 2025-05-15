@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Wrapped Analysis - Adam Zarak</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --background: #ffffff;
+            --card-background: #ffffff;
+            --text-color: #1a1a1a;
+            --border-color: #e2e8f0;
+        }
+
+        .dark {
+            --primary-color: #64748b;
+            --secondary-color: #60a5fa;
+            --background: #020817;
+            --card-background: #1e293b;
+            --text-color: #e2e8f0;
+            --border-color: #1e293b;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            background-color: var(--background);
+            color: var(--text-color);
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .project-header {
+            background: linear-gradient(rgba(2, 8, 23, 0.9), rgba(2, 8, 23, 0.9)), url('https://source.unsplash.com/random/1920x1080/?music') no-repeat center center/cover;
+            padding: 8rem 0;
+            color: white;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .modern-card {
+            background: var(--card-background);
+            border: 1px solid var(--border-color);
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .skill-tag {
+            display: inline-block;
+            padding: 0.35rem 0.75rem;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            margin: 0.25rem;
+            transition: all 0.2s ease;
+        }
+
+        .nav-link {
+            color: var(--text-color) !important;
+        }
+
+        .theme-switch {
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+            z-index: 1000;
+            background: var(--card-background);
+            border: 1px solid var(--border-color);
+            border-radius: 9999px;
+            padding: 0.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <!-- Theme Switch -->
+    <button class="theme-switch" onclick="toggleTheme()">
+        <i class="bi bi-moon-stars"></i>
+    </button>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top" style="background: var(--card-background)">
+        <div class="container">
+            <a class="navbar-brand" href="/">Adam Zarak</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/#projects">Projects</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Header -->
+    <header class="project-header">
+        <div class="container">
+            <h1 class="display-4 fw-bold mb-4">Spotify Wrapped Analysis</h1>
+            <div class="d-flex justify-content-center gap-2 flex-wrap">
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">FastAPI</span>
+                <span class="skill-tag">Data Analysis</span>
+                <span class="skill-tag">OpenAI</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Project Content -->
+    <main class="container mb-5">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="modern-card">
+                    <h2 class="mb-4">Project Overview</h2>
+                    <p>In collaboration with Hudson Griffith, we developed a comprehensive analysis of Spotify's Wrapped feature, creating interactive tools to explore music listening patterns and preferences. The project combines technical analysis with user-friendly visualization to provide insights into how Spotify processes and presents user listening data.</p>
+                    
+                    <h3 class="mt-4 mb-3">Key Features</h3>
+                    <ul>
+                        <li>Interactive state-by-state music preference mapping</li>
+                        <li>"Basicness" calculator for comparing music taste to regional trends</li>
+                        <li>Detailed analysis of Spotify's data collection and processing methods</li>
+                        <li>Integration with OpenAI's GPT for dynamic user feedback</li>
+                    </ul>
+
+                    <h3 class="mt-4 mb-3">Technical Implementation</h3>
+                    <ul>
+                        <li>Built using Python and FastAPI for backend processing</li>
+                        <li>Implemented data parsing algorithms for user preference analysis</li>
+                        <li>Created interactive visualizations for data presentation</li>
+                        <li>Integrated machine learning models for preference analysis</li>
+                    </ul>
+
+                    <div class="mt-4">
+                        <h3 class="mb-3">Links</h3>
+                        <div class="d-flex gap-3">
+                            <a href="https://www.hudsong.dev/spotify-wrapped-2024-data-analysis" target="_blank" class="btn btn-primary">
+                                View Live Project
+                            </a>
+                            <a href="https://github.com/yourusername/spotify-wrapped-analysis" target="_blank" class="btn btn-outline-primary">
+                                View Source Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modern-card">
+                    <h2 class="mb-4">Project Details</h2>
+                    <p>The Spotify Wrapped Analysis project dives deep into understanding how Spotify processes and presents user listening data. We reverse-engineered Spotify's calculation methods and created tools to help users better understand their music preferences.</p>
+                    
+                    <h3 class="mt-4 mb-3">Research Methodology</h3>
+                    <p>Our analysis involved:</p>
+                    <ul>
+                        <li>Analyzing extended streaming data from multiple users</li>
+                        <li>Testing various date ranges and parameters against known Wrapped results</li>
+                        <li>Implementing Python-based data analysis tools</li>
+                        <li>Creating visualization tools for presenting findings</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-4" style="background: var(--card-background);">
+        <div class="container text-center">
+            <p class="mb-0">&copy; 2024 Adam Zarak. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and Theme Toggle Script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function toggleTheme() {
+            const html = document.documentElement;
+            const themeIcon = document.querySelector('.theme-switch i');
+            
+            if (html.classList.contains('light')) {
+                html.classList.remove('light');
+                html.classList.add('dark');
+                themeIcon.classList.remove('bi-moon-stars');
+                themeIcon.classList.add('bi-sun');
+            } else {
+                html.classList.remove('dark');
+                html.classList.add('light');
+                themeIcon.classList.remove('bi-sun');
+                themeIcon.classList.add('bi-moon-stars');
+            }
+        }
+    </script>
+</body>
+</html> 
