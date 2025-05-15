@@ -113,6 +113,9 @@
         .video-container {
             position: relative;
             padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
         }
 
         .video-container video {
@@ -121,6 +124,8 @@
             left: 0;
             width: 100%;
             height: 100%;
+            object-fit: contain;
+            background: #000;
         }
     </style>
 </head>
@@ -172,8 +177,8 @@
                 <div class="modern-card mb-4">
                     <h2 class="h4 mb-3">Sample Cardiac Analysis</h2>
                     <div class="video-container mb-3">
-                        <video class="w-100" controls preload="metadata">
-                            <source src="../assets/media/SampleCardiacAnalysis.mp4" type="video/mp4">
+                        <video class="w-100" controls preload="metadata" playsinline>
+                            <source src="/assets/media/SampleCardiacAnalysis.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                     </div>
