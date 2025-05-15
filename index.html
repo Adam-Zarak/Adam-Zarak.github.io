@@ -159,6 +159,32 @@
             gap: 1.5rem;
         }
 
+        .project-grid .clickable-card {
+            height: 100%;
+        }
+
+        .project-grid .modern-card {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-grid .modern-card img {
+            width: 100%;
+            height: 200px; /* Fixed height for all project images */
+            object-fit: cover;
+        }
+
+        .project-grid .modern-card .content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-grid .modern-card .tags {
+            margin-top: auto;
+        }
+
         .contact-icon {
             width: 2.5rem;
             height: 2.5rem;
@@ -432,52 +458,60 @@
                 <a href="projects/rtls-rocketry.html" class="clickable-card">
                     <div class="modern-card">
                         <img src="https://source.unsplash.com/random/800x600/?rocket" class="img-fluid rounded mb-3" alt="RTLS Rocketry">
-                        <h4>RTLS Rocketry - GNC Lead</h4>
-                        <p>Led the development of a Return-To-Launch-Site trajectory control system with real-time course correction capabilities.</p>
-                        <div class="d-flex gap-2 flex-wrap mb-3">
-                            <span class="skill-tag">MATLAB</span>
-                            <span class="skill-tag">ESP32</span>
-                            <span class="skill-tag">Kalman Filter</span>
-                            <span class="skill-tag">Monte Carlo</span>
+                        <div class="content">
+                            <h4>RTLS Rocketry - GNC Lead</h4>
+                            <p>Led the development of a Return-To-Launch-Site trajectory control system with real-time course correction capabilities.</p>
+                            <div class="tags d-flex gap-2 flex-wrap mb-3">
+                                <span class="skill-tag">MATLAB</span>
+                                <span class="skill-tag">ESP32</span>
+                                <span class="skill-tag">Kalman Filter</span>
+                                <span class="skill-tag">Monte Carlo</span>
+                            </div>
                         </div>
                     </div>
                 </a>
                 <a href="projects/spotify-wrapped.html" class="clickable-card">
                     <div class="modern-card">
                         <img src="https://source.unsplash.com/random/800x600/?music" class="img-fluid rounded mb-3" alt="Spotify Analysis">
-                        <h4>Spotify Wrapped Analysis</h4>
-                        <p>FastAPI web application analyzing music preferences with GPT integration for dynamic user feedback.</p>
-                        <div class="d-flex gap-2 flex-wrap mb-3">
-                            <span class="skill-tag">Python</span>
-                            <span class="skill-tag">FastAPI</span>
-                            <span class="skill-tag">OpenAI</span>
-                            <span class="skill-tag">Data Analysis</span>
+                        <div class="content">
+                            <h4>Spotify Wrapped Analysis</h4>
+                            <p>FastAPI web application analyzing music preferences with GPT integration for dynamic user feedback.</p>
+                            <div class="tags d-flex gap-2 flex-wrap mb-3">
+                                <span class="skill-tag">Python</span>
+                                <span class="skill-tag">FastAPI</span>
+                                <span class="skill-tag">OpenAI</span>
+                                <span class="skill-tag">Data Analysis</span>
+                            </div>
                         </div>
                     </div>
                 </a>
                 <a href="projects/autonomous-boat.html" class="clickable-card">
                     <div class="modern-card">
                         <img src="https://source.unsplash.com/random/800x600/?boat" class="img-fluid rounded mb-3" alt="Autonomous Boat">
-                        <h4>Autonomous Boat Development</h4>
-                        <p>Designed and programmed an autonomous navigation system for a self-guided vessel using Arduino.</p>
-                        <div class="d-flex gap-2 flex-wrap mb-3">
-                            <span class="skill-tag">SolidWorks</span>
-                            <span class="skill-tag">Arduino</span>
-                            <span class="skill-tag">Sensors</span>
-                            <span class="skill-tag">Navigation</span>
+                        <div class="content">
+                            <h4>Autonomous Boat Development</h4>
+                            <p>Designed and programmed an autonomous navigation system for a self-guided vessel using Arduino.</p>
+                            <div class="tags d-flex gap-2 flex-wrap mb-3">
+                                <span class="skill-tag">SolidWorks</span>
+                                <span class="skill-tag">Arduino</span>
+                                <span class="skill-tag">Sensors</span>
+                                <span class="skill-tag">Navigation</span>
+                            </div>
                         </div>
                     </div>
                 </a>
                 <a href="projects/rocket-erector.html" class="clickable-card">
                     <div class="modern-card">
                         <img src="https://source.unsplash.com/random/800x600/?engineering,mechanism" class="img-fluid rounded mb-3" alt="Vertical Rocket Erector">
-                        <h4>Vertical Rocket Erector</h4>
-                        <p>Designed and developed a vertical rocket erector system as part of UCF's Engineering Mechanics course, applying theoretical principles to practical aerospace applications.</p>
-                        <div class="d-flex gap-2 flex-wrap mb-3">
-                            <span class="skill-tag">AutoCAD</span>
-                            <span class="skill-tag">Structural Analysis</span>
-                            <span class="skill-tag">Engineering Design</span>
-                            <span class="skill-tag">Fabrication</span>
+                        <div class="content">
+                            <h4>Vertical Rocket Erector</h4>
+                            <p>Designed and developed a vertical rocket erector system as part of UCF's Engineering Mechanics course, applying theoretical principles to practical aerospace applications.</p>
+                            <div class="tags d-flex gap-2 flex-wrap mb-3">
+                                <span class="skill-tag">AutoCAD</span>
+                                <span class="skill-tag">Structural Analysis</span>
+                                <span class="skill-tag">Engineering Design</span>
+                                <span class="skill-tag">Fabrication</span>
+                            </div>
                         </div>
                     </div>
                 </a>
