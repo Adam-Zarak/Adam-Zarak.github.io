@@ -53,6 +53,8 @@
             padding: 1.5rem;
             transition: all 0.3s ease;
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
         }
 
         .modern-card:hover {
@@ -65,6 +67,29 @@
             text-decoration: none;
             color: inherit;
             display: block;
+            position: relative;
+        }
+
+        .clickable-card::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 4px;
+            background: var(--secondary-color);
+            transition: width 0.3s ease;
+        }
+
+        .clickable-card:hover::after {
+            width: 100%;
+        }
+
+        .clickable-card:hover .modern-card {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            background: var(--card-background);
+            filter: brightness(1.05);
         }
 
         .clickable-card:hover {
