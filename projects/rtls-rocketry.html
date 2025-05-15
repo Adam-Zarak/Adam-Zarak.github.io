@@ -185,6 +185,214 @@
                 </div>
 
                 <div class="modern-card">
+                    <h2 class="mb-4">Detailed Technical Specifications</h2>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h4 class="mb-3">Hardware Components</h4>
+                            <ul class="list-unstyled">
+                                <li class="mb-3">
+                                    <strong>Microcontroller:</strong>
+                                    <ul>
+                                        <li>ESP32-WROOM-32D</li>
+                                        <li>Dual-core processor up to 240MHz</li>
+                                        <li>520KB SRAM, 4MB Flash</li>
+                                    </ul>
+                                </li>
+                                <li class="mb-3">
+                                    <strong>Sensors:</strong>
+                                    <ul>
+                                        <li>BNO055 9-DOF IMU</li>
+                                        <li>NEO-M8N GPS Module</li>
+                                        <li>BMP388 Barometric Pressure Sensor</li>
+                                        <li>RFM95W LoRa Radio Module</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h4 class="mb-3">Software Architecture</h4>
+                            <ul class="list-unstyled">
+                                <li class="mb-3">
+                                    <strong>Real-time OS:</strong>
+                                    <ul>
+                                        <li>FreeRTOS Task Management</li>
+                                        <li>Dual-core Task Distribution</li>
+                                        <li>Interrupt-driven Sensor Handling</li>
+                                    </ul>
+                                </li>
+                                <li class="mb-3">
+                                    <strong>Communication Protocols:</strong>
+                                    <ul>
+                                        <li>I2C for Sensor Integration</li>
+                                        <li>SPI for Radio Communication</li>
+                                        <li>UART for GPS Data</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modern-card">
+                    <h2 class="mb-4">Control System Implementation</h2>
+                    <h4 class="mb-3">Guidance Algorithm</h4>
+                    <p>The guidance system employs a sophisticated PD control algorithm with adaptive gains based on flight conditions:</p>
+                    <div class="achievement-card">
+                        <h5>Position Control</h5>
+                        <ul>
+                            <li>Proportional Gain (Kp): 0.8 - 2.5 (adaptive)</li>
+                            <li>Derivative Gain (Kd): 0.3 - 1.2 (adaptive)</li>
+                            <li>Update Rate: 50Hz</li>
+                        </ul>
+                    </div>
+                    <div class="achievement-card">
+                        <h5>Wind Compensation</h5>
+                        <ul>
+                            <li>Real-time wind estimation using Kalman filtering</li>
+                            <li>Dynamic trajectory adjustment</li>
+                            <li>Maximum wind speed tolerance: 15 mph</li>
+                        </ul>
+                    </div>
+                    
+                    <h4 class="mt-4 mb-3">Navigation System</h4>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h5>Sensor Fusion</h5>
+                            <ul>
+                                <li>Extended Kalman Filter implementation</li>
+                                <li>GPS position accuracy: ±2.5m</li>
+                                <li>Attitude estimation rate: 100Hz</li>
+                                <li>Barometric altitude resolution: ±0.5m</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h5>State Estimation</h5>
+                            <ul>
+                                <li>13-state vector tracking</li>
+                                <li>Position and velocity estimation</li>
+                                <li>Quaternion-based attitude representation</li>
+                                <li>Bias and scale factor compensation</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modern-card">
+                    <h2 class="mb-4">Performance Analysis</h2>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h4>Monte Carlo Simulation Results</h4>
+                            <ul>
+                                <li>Number of trials: 1,000+</li>
+                                <li>Success rate: 92%</li>
+                                <li>Average landing accuracy: 450ft</li>
+                                <li>Maximum deviation: 800ft</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h4>System Specifications</h4>
+                            <ul>
+                                <li>Control loop frequency: 50Hz</li>
+                                <li>Sensor fusion update rate: 100Hz</li>
+                                <li>Telemetry transmission rate: 10Hz</li>
+                                <li>Data logging rate: 20Hz</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <h4 class="mt-4 mb-3">Key Performance Metrics</h4>
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Metric</th>
+                                    <th>Target</th>
+                                    <th>Achieved</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Landing Accuracy</td>
+                                    <td>< 1000 ft</td>
+                                    <td>800 ft</td>
+                                </tr>
+                                <tr>
+                                    <td>Control Response Time</td>
+                                    <td>< 50 ms</td>
+                                    <td>20 ms</td>
+                                </tr>
+                                <tr>
+                                    <td>Wind Tolerance</td>
+                                    <td>12 mph</td>
+                                    <td>15 mph</td>
+                                </tr>
+                                <tr>
+                                    <td>Battery Life</td>
+                                    <td>2 hours</td>
+                                    <td>2.5 hours</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="modern-card">
+                    <h2 class="mb-4">Testing and Validation</h2>
+                    <div class="achievement-card">
+                        <h5>Hardware-in-the-Loop Testing</h5>
+                        <ul>
+                            <li>Custom MATLAB simulation environment</li>
+                            <li>Real-time sensor data injection</li>
+                            <li>Performance validation under various conditions</li>
+                        </ul>
+                    </div>
+                    <div class="achievement-card">
+                        <h5>Field Testing</h5>
+                        <ul>
+                            <li>Multiple test flights conducted</li>
+                            <li>Data collection and analysis</li>
+                            <li>System refinement based on real-world performance</li>
+                        </ul>
+                    </div>
+                    <div class="achievement-card">
+                        <h5>Safety Features</h5>
+                        <ul>
+                            <li>Redundant sensor systems</li>
+                            <li>Fail-safe recovery modes</li>
+                            <li>Emergency abort capabilities</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="modern-card">
+                    <h2 class="mb-4">Hardware-in-the-Loop Demonstration</h2>
+                    <p class="mb-4">Watch our HIL testing system in action, demonstrating real-time sensor data processing and control system response:</p>
+                    
+                    <!-- YouTube Embed -->
+                    <div class="ratio ratio-16x9 mb-4">
+                        <iframe 
+                            src="https://www.youtube.com/embed/r2cei03AAJ0?si=davxfxJy9HifmTtC"
+                            title="Hardware-in-the-Loop Testing Demonstration"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+
+                    <div class="mt-4">
+                        <h4 class="mb-3">About this Demonstration</h4>
+                        <p>This video showcases our Hardware-in-the-Loop testing environment, where we:</p>
+                        <ul>
+                            <li>Simulate flight conditions and sensor inputs</li>
+                            <li>Validate control system response in real-time</li>
+                            <li>Test edge cases and failure scenarios</li>
+                            <li>Verify system performance metrics</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="modern-card">
                     <h2 class="mb-4">Project Documentation</h2>
                     <p>Access the comprehensive technical documentation for the RTLS project, including detailed system architecture, validation strategies, performance analysis, and complete implementation details:</p>
                     
