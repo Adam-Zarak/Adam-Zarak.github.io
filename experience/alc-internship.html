@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control Systems Engineer Intern - Adam Zarak</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --background: #ffffff;
+            --card-background: #ffffff;
+            --text-color: #1a1a1a;
+            --border-color: #e2e8f0;
+        }
+
+        .dark {
+            --primary-color: #64748b;
+            --secondary-color: #60a5fa;
+            --background: #020817;
+            --card-background: #1e293b;
+            --text-color: #e2e8f0;
+            --border-color: #1e293b;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            background-color: var(--background);
+            color: var(--text-color);
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .experience-header {
+            background: linear-gradient(rgba(2, 8, 23, 0.9), rgba(2, 8, 23, 0.9)), url('https://source.unsplash.com/random/1920x1080/?automation,control') no-repeat center center/cover;
+            padding: 8rem 0;
+            color: white;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .modern-card {
+            background: var(--card-background);
+            border: 1px solid var(--border-color);
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .skill-tag {
+            display: inline-block;
+            padding: 0.35rem 0.75rem;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            margin: 0.25rem;
+            transition: all 0.2s ease;
+        }
+
+        .nav-link {
+            color: var(--text-color) !important;
+        }
+
+        .theme-switch {
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+            z-index: 1000;
+            background: var(--card-background);
+            border: 1px solid var(--border-color);
+            border-radius: 9999px;
+            padding: 0.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 1.5rem;
+            border-left: 2px solid var(--secondary-color);
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -0.5rem;
+            top: 0.5rem;
+            width: 1rem;
+            height: 1rem;
+            background-color: var(--secondary-color);
+            border-radius: 50%;
+        }
+
+        .achievement-card {
+            border-left: 4px solid var(--secondary-color);
+            padding-left: 1rem;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Theme Switch -->
+    <button class="theme-switch" onclick="toggleTheme()">
+        <i class="bi bi-moon-stars"></i>
+    </button>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top" style="background: var(--card-background)">
+        <div class="container">
+            <a class="navbar-brand" href="/">Adam Zarak</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/#experience">Experience</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Experience Header -->
+    <header class="experience-header">
+        <div class="container">
+            <h1 class="display-4 fw-bold mb-4">Control Systems Engineer Intern</h1>
+            <p class="lead mb-4">Automated Logic Corporation • Summer 2024</p>
+            <div class="d-flex justify-content-center gap-2 flex-wrap">
+                <span class="skill-tag">HVAC Controls</span>
+                <span class="skill-tag">Building Automation</span>
+                <span class="skill-tag">System Integration</span>
+                <span class="skill-tag">Technical Documentation</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Experience Content -->
+    <main class="container mb-5">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="modern-card">
+                    <h2 class="mb-4">Position Overview</h2>
+                    <p>As a Control Systems Engineer Intern at Automated Logic Corporation, I am working on developing and implementing building automation solutions, focusing on HVAC control systems and energy efficiency optimization.</p>
+
+                    <h3 class="mt-4 mb-3">Key Responsibilities</h3>
+                    <div class="achievement-card">
+                        <h5>Database Management</h5>
+                        <p>Created and maintained databases within ALC WEBCTRL platform, ensuring efficient data organization and accessibility for client applications.</p>
+                    </div>
+                    <div class="achievement-card">
+                        <h5>System Design</h5>
+                        <p>Designed control system panel layouts using Microsoft Visio, focusing on optimal component placement and system efficiency.</p>
+                    </div>
+                    <div class="achievement-card">
+                        <h5>Quality Assurance</h5>
+                        <p>Validated HVAC automation control logic and conducted system efficiency tests to ensure optimal performance.</p>
+                    </div>
+                </div>
+
+                <div class="modern-card">
+                    <h2 class="mb-4">Technical Skills Applied</h2>
+                    <div class="timeline-item">
+                        <h4>Building Automation Systems</h4>
+                        <ul>
+                            <li>WEBCTRL platform implementation</li>
+                            <li>Control logic programming</li>
+                            <li>System integration protocols</li>
+                        </ul>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>Control System Design</h4>
+                        <ul>
+                            <li>Panel layout optimization</li>
+                            <li>Component selection</li>
+                            <li>System architecture planning</li>
+                        </ul>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>Technical Documentation</h4>
+                        <ul>
+                            <li>System specifications</li>
+                            <li>Operation manuals</li>
+                            <li>Design documentation</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="modern-card">
+                    <h2 class="mb-4">Projects & Achievements</h2>
+                    <ul>
+                        <li>Developed comprehensive database structures for multiple client applications</li>
+                        <li>Streamlined control system layouts for improved efficiency</li>
+                        <li>Implemented quality assurance protocols for system validation</li>
+                        <li>Contributed to energy optimization initiatives</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-4" style="background: var(--card-background);">
+        <div class="container text-center">
+            <p class="mb-0">&copy; 2024 Adam Zarak. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and Theme Toggle Script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function toggleTheme() {
+            const html = document.documentElement;
+            const themeIcon = document.querySelector('.theme-switch i');
+            
+            if (html.classList.contains('light')) {
+                html.classList.remove('light');
+                html.classList.add('dark');
+                themeIcon.classList.remove('bi-moon-stars');
+                themeIcon.classList.add('bi-sun');
+            } else {
+                html.classList.remove('dark');
+                html.classList.add('light');
+                themeIcon.classList.remove('bi-sun');
+                themeIcon.classList.add('bi-moon-stars');
+            }
+        }
+    </script>
+</body>
+</html> 

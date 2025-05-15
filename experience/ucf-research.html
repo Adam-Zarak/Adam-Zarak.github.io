@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undergraduate Research Assistant - Adam Zarak</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --background: #ffffff;
+            --card-background: #ffffff;
+            --text-color: #1a1a1a;
+            --border-color: #e2e8f0;
+        }
+
+        .dark {
+            --primary-color: #64748b;
+            --secondary-color: #60a5fa;
+            --background: #020817;
+            --card-background: #1e293b;
+            --text-color: #e2e8f0;
+            --border-color: #1e293b;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            background-color: var(--background);
+            color: var(--text-color);
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .experience-header {
+            background: linear-gradient(rgba(2, 8, 23, 0.9), rgba(2, 8, 23, 0.9)), url('https://source.unsplash.com/random/1920x1080/?laboratory,research') no-repeat center center/cover;
+            padding: 8rem 0;
+            color: white;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .modern-card {
+            background: var(--card-background);
+            border: 1px solid var(--border-color);
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .skill-tag {
+            display: inline-block;
+            padding: 0.35rem 0.75rem;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            margin: 0.25rem;
+            transition: all 0.2s ease;
+        }
+
+        .nav-link {
+            color: var(--text-color) !important;
+        }
+
+        .theme-switch {
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+            z-index: 1000;
+            background: var(--card-background);
+            border: 1px solid var(--border-color);
+            border-radius: 9999px;
+            padding: 0.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 1.5rem;
+            border-left: 2px solid var(--secondary-color);
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -0.5rem;
+            top: 0.5rem;
+            width: 1rem;
+            height: 1rem;
+            background-color: var(--secondary-color);
+            border-radius: 50%;
+        }
+
+        .achievement-card {
+            border-left: 4px solid var(--secondary-color);
+            padding-left: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .research-highlight {
+            background: var(--primary-color);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Theme Switch -->
+    <button class="theme-switch" onclick="toggleTheme()">
+        <i class="bi bi-moon-stars"></i>
+    </button>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top" style="background: var(--card-background)">
+        <div class="container">
+            <a class="navbar-brand" href="/">Adam Zarak</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/#experience">Experience</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Experience Header -->
+    <header class="experience-header">
+        <div class="container">
+            <h1 class="display-4 fw-bold mb-4">Undergraduate Research Assistant</h1>
+            <p class="lead mb-4">UCF Biomechanics Laboratory • 2023-2024</p>
+            <div class="d-flex justify-content-center gap-2 flex-wrap">
+                <span class="skill-tag">3D Visualization</span>
+                <span class="skill-tag">Data Analysis</span>
+                <span class="skill-tag">Biomechanics</span>
+                <span class="skill-tag">Research Methods</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Experience Content -->
+    <main class="container mb-5">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="modern-card">
+                    <h2 class="mb-4">Research Overview</h2>
+                    <p>As an Undergraduate Research Assistant at UCF's Biomechanics Laboratory, I focus on analyzing cardiac cycles and biomechanical systems through advanced visualization and computational methods. This role combines mechanical engineering principles with biomedical applications.</p>
+
+                    <h3 class="mt-4 mb-3">Key Contributions</h3>
+                    <div class="achievement-card">
+                        <h5>3D Visualization</h5>
+                        <p>Utilized 3DSlicer software for detailed cardiac cycle visualization, enhancing understanding of mechanical aspects of heart function.</p>
+                    </div>
+                    <div class="achievement-card">
+                        <h5>Computational Analysis</h5>
+                        <p>Conducted in-depth analysis of biomechanical systems, applying engineering principles to biological processes.</p>
+                    </div>
+                    <div class="achievement-card">
+                        <h5>Data Processing</h5>
+                        <p>Preprocessed and analyzed MRI datasets for finite element modeling, ensuring accurate representation of biological structures.</p>
+                    </div>
+                </div>
+
+                <div class="modern-card">
+                    <h2 class="mb-4">Research Methods & Tools</h2>
+                    <div class="timeline-item">
+                        <h4>Visualization Software</h4>
+                        <ul>
+                            <li>3DSlicer for medical imaging</li>
+                            <li>Volume rendering techniques</li>
+                            <li>Dynamic motion analysis</li>
+                        </ul>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>Data Analysis</h4>
+                        <ul>
+                            <li>MATLAB for numerical analysis</li>
+                            <li>Statistical modeling</li>
+                            <li>Data validation techniques</li>
+                        </ul>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>Finite Element Analysis</h4>
+                        <ul>
+                            <li>Model preparation</li>
+                            <li>Mesh generation</li>
+                            <li>Boundary condition definition</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="modern-card">
+                    <h2 class="mb-4">Research Impact</h2>
+                    <div class="research-highlight">
+                        <h4>Key Findings</h4>
+                        <ul class="mb-0">
+                            <li>Enhanced understanding of cardiac mechanics through 3D visualization</li>
+                            <li>Improved preprocessing methods for MRI data analysis</li>
+                            <li>Contributed to ongoing research in biomechanical modeling</li>
+                        </ul>
+                    </div>
+                    <div class="mt-4">
+                        <h4>Skills Developed</h4>
+                        <ul>
+                            <li>Advanced data analysis and visualization techniques</li>
+                            <li>Research methodology and documentation</li>
+                            <li>Cross-disciplinary collaboration</li>
+                            <li>Technical problem-solving in biomedical applications</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-4" style="background: var(--card-background);">
+        <div class="container text-center">
+            <p class="mb-0">&copy; 2024 Adam Zarak. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and Theme Toggle Script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function toggleTheme() {
+            const html = document.documentElement;
+            const themeIcon = document.querySelector('.theme-switch i');
+            
+            if (html.classList.contains('light')) {
+                html.classList.remove('light');
+                html.classList.add('dark');
+                themeIcon.classList.remove('bi-moon-stars');
+                themeIcon.classList.add('bi-sun');
+            } else {
+                html.classList.remove('dark');
+                html.classList.add('light');
+                themeIcon.classList.remove('bi-sun');
+                themeIcon.classList.add('bi-moon-stars');
+            }
+        }
+    </script>
+</body>
+</html> 
